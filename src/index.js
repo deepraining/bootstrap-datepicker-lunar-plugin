@@ -1,6 +1,7 @@
 
 'use strict';
 
+require('bootstrap-datepicker');
 require('./css/index.css');
 
 var $ = require('jquery');

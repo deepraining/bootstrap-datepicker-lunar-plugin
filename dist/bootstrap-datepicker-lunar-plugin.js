@@ -1,24 +1,24 @@
 /*!
  * 
- *     bootstrap-datepicker-lunar-plugin v0.0.1
+ *     bootstrap-datepicker-lunar-plugin v0.0.2
  * 
  *     https://github.com/senntyou/bootstrap-datepicker-lunar-plugin
  * 
  *     @senntyou <jiangjinbelief@163.com>
  * 
- *     2017-12-27 17:28:15
+ *     2017-12-28 08:21:53
  *     
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("jquery"), require("lunar-calendar"));
+		module.exports = factory(require("jquery"), require("bootstrap-datepicker"), require("lunar-calendar"));
 	else if(typeof define === 'function' && define.amd)
-		define(["jquery", "lunar-calendar"], factory);
+		define(["jquery", "bootstrap-datepicker", "lunar-calendar"], factory);
 	else if(typeof exports === 'object')
-		exports["bootstrap-datepicker-lunar-plugin"] = factory(require("jquery"), require("lunar-calendar"));
+		exports["bootstrap-datepicker-lunar-plugin"] = factory(require("jquery"), require("bootstrap-datepicker"), require("lunar-calendar"));
 	else
-		root["bootstrap-datepicker-lunar-plugin"] = factory(root["jQuery"], root["LunarCalendar"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_10__) {
+		root["bootstrap-datepicker-lunar-plugin"] = factory(root["jQuery"], root["bootstrap-datepicker"], root["LunarCalendar"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_11__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -99,10 +99,11 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 
 __webpack_require__(2);
+__webpack_require__(3);
 
 var $ = __webpack_require__(0);
 
-var show = __webpack_require__(7);
+var show = __webpack_require__(8);
 
 /**
  * datepicker prototype
@@ -125,12 +126,18 @@ module.exports = void 0;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(3);
+var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -138,7 +145,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(6)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -155,10 +162,10 @@ if(false) {
 }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -169,7 +176,7 @@ exports.push([module.i, "\r\n.datepicker .lunar-day {\r\n    width: 50px;\r\n}\r
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -251,7 +258,7 @@ function toComment(sourceMap) {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -307,7 +314,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -623,7 +630,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -718,7 +725,7 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -727,8 +734,8 @@ module.exports = function (css) {
 
 var $ = __webpack_require__(0);
 
-var makeHtml = __webpack_require__(8);
-var getLunarDate = __webpack_require__(9);
+var makeHtml = __webpack_require__(9);
+var getLunarDate = __webpack_require__(10);
 
 module.exports = function (self) {
         $(self.picker).find('.day').map(function () {
@@ -748,7 +755,7 @@ module.exports = function (self) {
 };
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -760,16 +767,16 @@ module.exports = function (day, lunarDay) {
 };
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 
-var LunarCalendar = __webpack_require__(10);
+var LunarCalendar = __webpack_require__(11);
 
-var getDate = __webpack_require__(11);
+var getDate = __webpack_require__(12);
 
 /**
  * get lunar year, month, day, week according to input timestamp
@@ -791,13 +798,13 @@ module.exports = function (timeStamp) {
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_10__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_11__;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
