@@ -6,14 +6,17 @@
 * [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)
 * [LunarCalendar](https://github.com/zzyss86/LunarCalendar)
 
-## 打开方式
+## 安装
 
 ```
-<script src="path/to/jquery"></script>
-<script src="path/to/bootstrap-datepicker"></script>
-<script src="path/to/LunarCalendar"></script>
-<script src="path/to/bootstrap-datepicker-lunar-plugin"></script>
-<script>
+npm install --save bootstrap-datepicker-lunar-plugin
+```
+
+## 使用
+
+```
+const $ = require('jquery');
+require('bootstrap-datepicker-lunar-plugin');
+
 $('selector').datepicker({...});
-</script>
 ```
