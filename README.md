@@ -1,4 +1,6 @@
-# 中国农历日期选择插件, for [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker).
+# bootstrap-datepicker-lunar-plugin
+
+中国农历日期选择插件, for [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker).
 
 ## 依赖
 
