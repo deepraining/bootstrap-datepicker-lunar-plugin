@@ -1,29 +1,12 @@
+import config from './config';
+import setEnv from './set_env';
+import getEnv from './get_env';
+import send from './send';
+import set from './set';
 
-'use strict';
+send.config = config;
+send.setEnv = setEnv;
+send.getEnv = getEnv;
+send.set = set;
 
-require('bootstrap-datepicker');
-require('./css/index.css');
-
-var $ = require('jquery');
-
-var show = require('./show');
-
-/**
- * datepicker prototype
- */
-var proto = $.fn.datepicker.prototype.constructor.Constructor.prototype;
-
-/**
- * rewrite  datepicker.prototype.show
- * @type {$.fn.datepicker.prototype.constructor.Constructor.show|*}
- */
-proto.oldShow = proto.show;
-proto.show = function(){
-    var self = this;
-    self.oldShow(arguments);
-
-    show(self);
-};
-
-
-module.exports = void 0;
+export default send;
