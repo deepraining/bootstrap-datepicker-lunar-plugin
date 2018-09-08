@@ -2,6 +2,8 @@
 
 中国农历日期选择插件, for [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker).
 
+![](./preview.png)
+
 ## 依赖
 
 * [jquery](https://github.com/jquery/jquery)
